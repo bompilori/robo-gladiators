@@ -6,11 +6,24 @@ var playerMoney = 10;
 // you can also log multiple values at once like this
 console.log("Robot Name: " + playerName, " Attack: " + playerAttack, " Health: " + playerHealth, " Money: " + playerMoney);
 
-var enemyName = "Roborto"; //string data type
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+/* console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+console.log(enemyNames.length);
+
+for(var i = 0; i < enemyNames.length; i++)
+{
+    console.log(enemyNames[i]);
+    console.log(i);
+    console.log(enemyNames[i] + " is at " + i + " index");
+} */
+
 var enemyHealth = 50; //numeric data type
 var enemyAttack = 12;
 
-var fight = function()
+var fight = function(enemyName)
 {
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
     //if player choses to fight, then fight
@@ -76,4 +89,7 @@ var fight = function()
         window.alert("You need to choose a valid option. Try again!");
     }
 }
-fight();
+for (var i = 0; i < enemyNames.length; i++)
+{
+    fight(enemyNames[i]);
+}
